@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity(){
         enableEdgeToEdge() // システムバーに合わせた表示を調整
         setContentView(R.layout.activity_main)
 
-        // ④ システムバーのパディングを適用
+        
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // ① ボタンのビューを取得してリスナーを設定
+        
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
         val resetButton = findViewById<Button>(R.id.button3)
